@@ -50,7 +50,10 @@ nav {
 
 footer {
   margin-top: 30px;
-  background-color: rgb(173, 168, 168);
+}
+
+footer img {
+  margin: 30px 20px;
 }
 
 .ri {
@@ -63,4 +66,8 @@ footer {
 
 .partenaires {
   text-align: center;
+}
+
+.partenaires p {
+  font-size: 10px;
 }
