@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
   //le movement du fichier
   //move_uploaded_file($Nomdufichier à uploader, $destination)
   if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-  echo "<img src='$uploadfile' width='15%' alt='lol'>";
+  echo "<img src='$uploadfile' width='15%' alt=''>";
   } else {
   echo "Possible file upload attack!\n";
   }

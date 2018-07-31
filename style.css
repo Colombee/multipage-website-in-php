@@ -7,31 +7,17 @@ header {
 
 .logo {
   width: 30% ;
-  background: rgba(255,255,255, 0.7);
-  border-radius: 5px;
 }
 
-.home {
-  background: rgba(255,255,255, 0.7);
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-.formations{
-  background: rgba(255,255,255, 0.7);
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-.contact {
-  background: rgba(255,255,255, 0.5);
+.logo, .home, .formations, .contact {
+  background: rgba(0,0,0, 0.5);
   border-radius: 5px;
   margin-left: 10px;
 }
 
 nav {
   font-size: 1.5em;
-  background-image: url(images/resto.jpg);
+  background-image: url(images/wood.jpg);
 }
 
 .main {
@@ -40,6 +26,7 @@ nav {
 
 .menu{
   border: 1px black solid;
+  border-radius: 5px;
 }
 
 .menu ul {
