@@ -2,23 +2,44 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
+    $lastname = "";
+    $firstname = "";
     if(@$_POST['button-submit']){
         $gender = $_POST['gender'];
 
+        $lastname = $_POST['lastname'];
+        $san_lastname = filter_var($lastname, FILTER_SANITIZE_STRING);
+        // $val_lastname = filter_var($lastname, FILTER_VALIDATE_EMAIL);
+
+        $firstname = $_POST['firstname'];
+        $san_firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
+        // $val_firstname = filter_var($firstname, FILTER_VALIDATE_EMAIL);
+        
         $email = $_POST['email'];
         $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $val_email = filter_var($san_email, FILTER_VALIDATE_EMAIL);
-
     };
+
+    function remplir($i){
+        global $i;
+        if($i !== false) {
+            return $i;
+        }
+        else {
+            return "veuillez remplir le champs précédent";
+        }  
+    };
+    
     function gender(){
         global $gender;
         if(@$gender !== false) {
             return $gender;
-        } 
+        }
         else {
             return "veuillez indiquer votre genre";
         }
     };
+
     function val_email(){
         global $val_email;
         if(@$val_email !== false) {
@@ -45,17 +66,19 @@
 
     <!-- POST METHOD -->
     <form method="post" action="contact.php">
-        <input type="radio" name="gender" value="monsieur"> Mr 
-        <input type="radio" name="gender" value="madame"> Mme
-        <input type="radio" name="gender" value="mademoiselle"> Mlle
+        <input type="radio" name="gender" value="monsieur"> Homme
+        <input type="radio" name="gender" value="madame"> Femme
+        <input type="radio" name="gender" value="sans mention" checked> Non-binaire
         <p style="color:red"><?php echo gender() ?><p>
         Nom :<br>
-        <input type="text" name="lastname"><br>
+        <input type="text" name="lastname">
+        <p style="color:red"><?php echo remplir($lastname); echo $lastname; ?><p>
         Prénom :<br>
-        <input type="text" name="firstname"><br>
+        <input type="text" name="firstname">
+        <p style="color:red"><?php echo remplir($firstname); echo $firstname; ?><p>
         Email :<br>
         <input type="email" name="email">
-        <p style="color:red"><?php echo val_email() ?><p>
+        <p style="color:red"><?php echo val_email(); ?><p>
         Objet :<br>
         <select name="object-list" form="objects">
             <option value="restaurant">Restaurant</option>
