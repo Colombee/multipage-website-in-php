@@ -1,0 +1,66 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+  margin-bottom: 3em;
+}
+
+.logo {
+  width: 30% ;
+}
+
+nav {
+  font-size: 1.5em;
+  background-image: url(images/resto.jpg);
+}
+
+.main {
+  margin: 0;
+}
+
+.menu{
+  border: 1px black solid;
+}
+
+.menu ul {
+  padding-left: 15px;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu h5 {
+    color: rgb(163, 57, 64);
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.menu h6 {
+  color: rgb(160, 6, 16);
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.4em;
+}
+
+.horaireMenu {
+  padding-left: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: rgb(173, 168, 168);
+}
+
+.ri {
+  width: 6%;
+}
+
+.fse3 {
+  width: 10%;
+}
+
+.partenaires {
+  text-align: center;
+}
