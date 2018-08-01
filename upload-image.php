@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
   if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
   echo "<img src='$uploadfile' style='max-width:300px' alt=''>";
   } else {
-  echo "Possible file upload attack!\n";
+  echo "Possible file upload attack\n";
   }
   // var_dump($_FILES);
   // print "</pre>";
