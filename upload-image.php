@@ -1,4 +1,4 @@
-<form class="" enctype='multipart/form-data' action="index.php" method="post">
+<form class="" enctype='multipart/form-data' action="upload-image.php" method="post">
   <!-- definis la taille maximale du fichier -->
   <input type="hidden" name="MAX_FILE_SIZE" value="3000000">
   Send this file <input type="file" name="userfile">
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
   //le movement du fichier
   //move_uploaded_file($Nomdufichier à uploader, $destination)
   if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-  echo "<img src='$uploadfile' width='15%' alt=''>";
+  echo "<img src='$uploadfile' style='max-width:300px' alt=''>";
   } else {
   echo "Possible file upload attack!\n";
   }
