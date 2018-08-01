@@ -1,5 +1,5 @@
 <div class="col-3 mr-auto menu">
-  <h5><p>MENU <i class="fas fa-utensils fa-xs"></i> </p></h5>
+  <h5><p>MENU <i class="fas fa-utensils fa-xs"></i></p></h5>
   <ul>
     <li>
       <h6>Potage</h6>

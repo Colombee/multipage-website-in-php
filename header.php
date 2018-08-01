@@ -5,17 +5,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse navigation" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active home">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item formations">
-          <a class="nav-link" href="#">Formations</a>
-        </li>
-        <li class="nav-item contact">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active navli">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item navli">
+            <a class="nav-link" href="#">Formations</a>
+          </li>
+          <li class="nav-item navli" id="padding-right-nav">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
     </div>
+    <img class="plate-img" src="images/header_plate2.png" alt="plate decoration">
   </nav>
 </header>
