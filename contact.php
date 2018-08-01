@@ -2,9 +2,9 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    $lastname = "";
-    $firstname = "";
-    if(@$_POST['button-submit']){
+    $button_submit = $_POST['button-submit'];
+
+    if($_POST['button-submit']){
         $gender = $_POST['gender'];
 
         $lastname = $_POST['lastname'];
@@ -18,37 +18,33 @@
         $email = $_POST['email'];
         $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $val_email = filter_var($san_email, FILTER_VALIDATE_EMAIL);
-    };
-
+    }
+    
     function remplir($i){
-        global $i;
-        if($i !== false) {
+        if (isset($i) AND !empty($i)){ // Ligne à utiliser pour régler le souci des variables undefined
             return $i;
-        }
-        else {
+        } else {
             return "veuillez remplir le champs précédent";
-        }  
-    };
+        }
+    }
     
     function gender(){
         global $gender;
         if(@$gender !== false) {
             return $gender;
-        }
-        else {
+        } else {
             return "veuillez indiquer votre genre";
         }
-    };
+    }
 
     function val_email(){
         global $val_email;
         if(@$val_email !== false) {
             return $val_email;
-        } 
-        else {
+        } else {
             return "veuillez indiquer une adresse email valide";
         }
-    };
+    }
     
 ?>
 
@@ -72,7 +68,7 @@
         <p style="color:red"><?php echo gender() ?><p>
         Nom :<br>
         <input type="text" name="lastname">
-        <p style="color:red"><?php echo remplir($lastname); echo $lastname; ?><p>
+        <p style="color:red"><?php echo remplir($lastname)?><p>
         Prénom :<br>
         <input type="text" name="firstname">
         <p style="color:red"><?php echo remplir($firstname); echo $firstname; ?><p>
