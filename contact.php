@@ -12,7 +12,6 @@
         $lastname = $_POST['lastname'];
         $san_lastname = filter_var($lastname, FILTER_SANITIZE_STRING);
         // $val_lastname = filter_var($lastname, FILTER_VALIDATE_EMAIL);
-
         $firstname = $_POST['firstname'];
         $san_firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
         // $val_firstname = filter_var($firstname, FILTER_VALIDATE_EMAIL);
@@ -40,11 +39,11 @@
       }
     }
 
-    function remplir($i,$button_submit){
-      if(!empty($i)){
-        return $i;
+    function remplir($i,$j,$button_submit){
+      if(!empty($i) AND !empty($j)){
+        return $i . $j;
       } else {
-        return "veuillez remplir le champs précédent";
+        return "Veuillez remplir les champs précédent";
       }
     }
 
@@ -53,7 +52,7 @@
         if($gender !== false) {
             return $gender;
         } else {
-            return "veuillez indiquer votre genre";
+            return "Veuillez indiquer votre genre";
         }
     }
 
@@ -62,7 +61,7 @@
         if($val_email !== false) {
             return $val_email;
         } else {
-            return "veuillez indiquer une adresse email valide";
+            return "Veuillez indiquer une adresse email valide";
         }
     }
 
@@ -77,6 +76,10 @@
       <title>Document</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <?php include("header.php"); ?>
@@ -84,38 +87,33 @@
       <div class="row main">
         <div class="col-5 contenu offset-2">
           <h2>Contact</h2>
-
           <!-- POST METHOD -->
-          <form method="post" enctype='multipart/form-data' action="contact.php">
+          <form method="POST" action="contact.php">
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" name"firstname" placeholder="First name">
+                <input type="text" class="form-control" name="lastname" placeholder="*Last name"/>
               </div>
-              <p style="color:red"><?php if (isset($button_submit)) echo remplir($firstname,$button_submit);?><p>
               <div class="col">
-                <input type="text" class="form-control" name="lastname" placeholder="Last name">
+                <input type="text" class="form-control" name='firstname' placeholder="*First name" />
               </div>
-              <p style="color:red"><?php if (isset($button_submit)) echo remplir($lastname,$button_submit)?><p>
             </div>
-            <br>
+            <p style="color:red"><?php if (isset($button_submit)) echo remplir($firstname,$lastname,$button_submit);?><p>
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="monsieur">
+              <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="Monsieur">
               <label class="custom-control-label" for="customRadioInline1">Homme</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="customRadioInline2" name="gender" class="custom-control-input" value="madame">
+              <input type="radio" id="customRadioInline2" name="gender" class="custom-control-input" value="Madame">
               <label class="custom-control-label" for="customRadioInline2">Femme</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="customRadioInline3" name="gender" class="custom-control-input" value="sans mention" checked>
+              <input type="radio" id="customRadioInline3" name="gender" class="custom-control-input" value="Sans mention" checked>
               <label class="custom-control-label" for="customRadioInline3">Non-binaire</label>
             </div>
             <p style="color:red"><?php echo gender() ?><p>
-            <br>
-            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             <p style="color:red"><?php echo val_email(); ?><p>
-            <br>
             <select class="custom-select" name="object-list">
               <option selected>Objet</option>
               <option value="restaurant">Restaurant</option>
@@ -128,7 +126,7 @@
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000">
               <input type="file" class="custom-file-input" id="customFile" name="button-file">
               <label class="custom-file-label" for="customFile">Choose file</label>
-              <?php if (isset($button_submit)) echo uploadImage() ?>
+              <p> <?php if (isset($button_submit)) echo uploadImage(); ?></p>
             </div>
             <br> <br>
             <div class="form-group">
@@ -145,45 +143,25 @@
             <br> <br>
             <button type="submit" name="button-submit" class="btn btn-primary">Envoyer</button>
           </form>
-          <!-- <form method="post" enctype='multipart/form-data' action="contact.php">
-              <input type="radio" name="gender" value="monsieur"> Homme
-              <input type="radio" name="gender" value="madame"> Femme
-              <input type="radio" name="gender" value="sans mention" checked> Non-binaire
-              <p style="color:red"><?php  echo gender() ?><p>
-              Nom :<br>
-              <input type="text" name="lastname">
-              <p style="color:red"><?php if (isset($button_submit)) echo remplir($lastname,$button_submit)?><p>
-              Prénom :<br>
-              <input type="text" name="firstname">
-              <p style="color:red"><?php if (isset($button_submit)) echo remplir($firstname,$button_submit);?><p>
-              Email :<br>
-              <input type="email" name="email">
-              <p style="color:red"><?php echo val_email(); ?><p>
-              Objet :<br>
-              <select name="object-list" form="objects">
-                  <option value="restaurant">Restaurant</option>
-                  <option value="formations">Formations</option>
-                  <option value="opel">Administratif</option>
-                  <option value="other">Autre</option>
-              </select> <br>
-              <input type="hidden" name="MAX_FILE_SIZE" value="3000000">
-              Photo illustrant vos propos : <br>
-              <input type="file" name="button-file">
-              <br>
-              <?php if (isset($button_submit)) echo uploadImage() ?>
-              <br>
-              Message : <br>
-              <textarea id="textmessage" name="message" style="height:200px"></textarea><br>
-              Format de réponse : <br>
-              <input type="radio" name="txt" value="html-txt"> HTML
-              <input type="radio" name="txt" value="texte-txt"> Texte <br>
-              <input type="submit" name="button-submit" value="Envoyer">
-          </form> -->
           <br>
         </div>
         <?php include("menu.php"); ?>
       </div>
     </main>
     <?php include("footer.php"); ?>
+    <script type="text/javascript">
+      // $("input[type=file]").change(function () {
+      //   var fieldVal = $(this).val();
+      //
+      //   // Change the node's value by removing the fake path (Chrome)
+      //   fieldVal = fieldVal.replace("C:\\fakepath\\", "");
+      //
+      //   if (fieldVal != undefined || fieldVal != "") {
+      //     $(this).next(".custom-file-label").attr('data-content', fieldVal);
+      //     $(this).next(".custom-file-label").text(fieldVal);
+      //   }
+      //
+      // });
+    </script>
   </body>
 </html>
