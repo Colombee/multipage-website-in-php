@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse navigation" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active navli">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item navli">
-            <a class="nav-link" href="#">Formations</a>
+            <a class="nav-link" href="formations.php">Formations</a>
           </li>
           <li class="nav-item navli" id="padding-right-nav">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
         </ul>
     </div>

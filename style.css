@@ -1,6 +1,7 @@
 html{
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
@@ -9,6 +10,24 @@ body {
 
 header {
   margin-bottom: 5em;
+}
+
+main h1{
+  font-size: 1.5em;
+  color: #860286;
+  padding-top: 1em;
+  font-family: 'Dosis', sans-serif;
+}
+
+main h2{
+  font-size: 1.3em;
+  color: #860286;
+  padding-top: 1em;
+  font-family: 'Dosis', sans-serif;
+}
+
+.main-formations li{
+  list-style-type: none;
 }
 
 .logo, .navli{
@@ -54,6 +73,7 @@ nav {
 
 .menu li {
   list-style-type: none;
+  text-align: center;
 }
 
 .menu h5 {
@@ -63,17 +83,15 @@ nav {
     margin-top: 20px;
     font-size: 2em;
     border-radius: 5px;
-    background-color:#990099;
+    background-color:#860286;
     padding-left: 20px;
+    text-align: center;
 }
 
 .menu h6 {
   font-family: 'Dosis', sans-serif;
   font-size: 1.4em;
-  color:#ad02ad;
-}
-
-li {
+  color:#860286;
   text-align: center;
 }
 
@@ -81,9 +99,21 @@ li {
   padding-left: 10px;
 }
 
+.btn-formations{
+  color: #860286;
+  font-weight: bold;
+  border: 1px solid #860286;
+  background-color: white;
+  display: inline;
+  margin-top: 1em;
+}
+
 footer {
   margin-top: 30px;
   background-color: rgb(67, 68, 71);
+  position: relative;
+  display: block;
+  bottom: 0px;
 }
 
 footer img {

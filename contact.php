@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <h2>Contact</h2> 
+    <h2 id="contact">Contact</h2> 
 
     <!-- POST METHOD -->
     <form method="post" action="contact.php">
