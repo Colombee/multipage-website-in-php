@@ -1,23 +1,61 @@
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
 header {
-  margin-bottom: 3em;
+  margin-bottom: 5em;
+}
+
+main h1{
+  font-size: 1.5em;
+  color: #860286;
+  padding-top: 1em;
+  font-family: 'Dosis', sans-serif;
+}
+
+main h2{
+  font-size: 1.3em;
+  color: #860286;
+  padding-top: 1em;
+  font-family: 'Dosis', sans-serif;
+}
+
+.main-formations li{
+  list-style-type: none;
+}
+
+.logo, .navli{
+  margin: 25px;
 }
 
 .logo {
-  width: 30% ;
-}
-
-.logo, .home, .formations, .contact {
-  background: rgba(0,0,0, 0.5);
-  border-radius: 5px;
-  margin-left: 10px;
+  width: 35% ;
+  margin-left: 15%;
 }
 
 nav {
-  font-size: 1.5em;
-  background-image: url(images/wood.jpg);
+  font-size: 1.4em;
+  background-image: url(images/header_nappe_800x380.jpg);
+  border-bottom: 10px rgb(67, 68, 71) solid;
+}
+
+#padding-right-nav {
+  padding-right: 14em;
+  z-index: 2;
+}
+
+.plate-img{
+  width: 10em;
+  padding: 0;
+  position: absolute;
+  right: 4em;
+  z-index: 1;
 }
 
 .main {
@@ -25,7 +63,7 @@ nav {
 }
 
 .menu{
-  border: 1px black solid;
+  border: 1px rgb(226, 230, 241) solid;
   border-radius: 5px;
 }
 
@@ -35,46 +73,84 @@ nav {
 
 .menu li {
   list-style-type: none;
+  text-align: center;
 }
 
 .menu h5 {
-    color: rgb(163, 57, 64);
+    color: white;
     text-align: center;
     font-family: 'Dosis', sans-serif;
     margin-top: 20px;
     font-size: 2em;
+    border-radius: 5px;
+    background-color:#860286;
+    padding-left: 20px;
+    text-align: center;
 }
 
 .menu h6 {
-  color: rgb(160, 6, 16);
   font-family: 'Dosis', sans-serif;
   font-size: 1.4em;
+  color:#860286;
+  text-align: center;
 }
 
 .horaireMenu {
   padding-left: 10px;
 }
 
+.btn-formations{
+  color: #860286;
+  font-weight: bold;
+  border: 1px solid #860286;
+  background-color: white;
+  display: inline;
+  margin-top: 1em;
+}
+
+.btn-formations:hover{
+  color: #860286;
+  font-weight: bold;
+  border: 1px solid #860286;
+  background-color: #f3e7f3;
+}
+
+.btn-formations:onclick{
+  color: #860286;
+  font-weight: bold;
+  border: 1px solid #860286;
+  background-color: #e9c6e9;
+}
+
+#toggle2{
+  display: none;
+}
+
 footer {
   margin-top: 30px;
+  background-color: rgba(67, 68, 71, 0.5);
+  position: relative;
+  display: block;
+  bottom: 0px;
 }
 
 footer img {
   margin: 30px 20px;
 }
 
-.ri {
-  width: 6%;
-}
-
-.fse3 {
-  width: 10%;
-}
-
 .partenaires {
   text-align: center;
+  color: white;
 }
 
 .partenaires p {
-  font-size: 10px;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+
+.logos-footer{
+  height: 60px;
+  /* filter: grayscale(100%); */
+  filter: brightness(0.75);
+  
 }

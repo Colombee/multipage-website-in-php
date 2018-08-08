@@ -133,7 +133,7 @@
     <main>
       <div class="row main">
         <div class="col-5 contenu offset-2">
-          <h2>Contact</h2>
+          <h2 id="contact">Contact</h2>
           <!-- POST METHOD -->
           <form method="POST" enctype='multipart/form-data' action="contact.php">
             <div class="row">
