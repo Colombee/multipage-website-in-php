@@ -3,6 +3,7 @@
     ini_set('display_errors', 1);
     use PHPMailer\PHPMailer\PHPMailer;
     require 'vendor/autoload.php';
+    $uploadfile = "";
 
      if (isset($_POST['button-submit'])){
       $button_submit = $_POST['button-submit'];
@@ -29,7 +30,9 @@
         $san_message = filter_var($message,FILTER_SANITIZE_STRING);
     }
 
-    if (isset($button_submit)){
+    function envoiMail($chemin = '')
+    {
+      global $email,$firstname, $lastname,$objet,$message;
       $mail = new PHPMailer;
       $mail -> isSMTP();
       //Enable SMTP debugging
@@ -49,14 +52,14 @@
       //Set who the message is to be sent to
       $mail->addAddress($email , $firstname . $lastname);
       //Set the subject line
-      $mail->Subject = 'FOR.E.T Catégorie: ' . $objet;
+      $mail->Subject = 'FOR.E.T : ' . $objet;
       //Read an HTML message body from an external file, convert referenced images to embedded,
       //convert HTML into a basic plain-text alternative body
       $mail->msgHTML($message);
       //Replace the plain text body with one created manually
       $mail->AltBody = 'This is a plain-text message bod';
       //Attach an image file
-      $mail->addAttachment("images/logo.png");
+      $mail->addAttachment("images/".basename($_FILES['button-file']['name']));
       //send the message, check for errors
       $mail->send();
       // if (!$mail->send()) {
@@ -66,14 +69,17 @@
       // }
     }
 
+
     function uploadImage($value='') {
       if (isset($_FILES['button-file']['name'])) {
+        global $uploadfile;
         //le dossier vers où uploader
         $uploaddir = 'uploads/';
         //la destination complete
         $uploadfile = $uploaddir . basename($_FILES['button-file']['name']);
         //le movement du fichier
         //move_uploaded_file($Nomdufichier à uploader, $destination)
+        envoiMail($uploadfile);
         if (move_uploaded_file($_FILES['button-file']['tmp_name'], $uploadfile)) {
           // return "<img src='$uploadfile' style='max-width:300px' alt=''>";
           return "Fichier uploadé avec succès.";
@@ -132,10 +138,10 @@
           <form method="POST" enctype='multipart/form-data' action="contact.php">
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" name="lastname" placeholder="*Last name"/>
+                <input type="text" class="form-control" name='firstname' placeholder="*First name" />
               </div>
               <div class="col">
-                <input type="text" class="form-control" name='firstname' placeholder="*First name" />
+                <input type="text" class="form-control" name="lastname" placeholder="*Last name"/>
               </div>
             </div>
             <?php if (isset($button_submit)) echo remplir($firstname,$lastname,$button_submit);?>
@@ -157,10 +163,10 @@
             <?php echo val_email(); ?>
             <select class="custom-select" name="object-list">
               <option selected>Objet</option>
-              <option value="restaurant">Restaurant</option>
-              <option value="formations">Formations</option>
-              <option value="administratif">Administratif</option>
-              <option value="other">Autre</option>
+              <option value="Restaurant">Restaurant</option>
+              <option value="Formations">Formations</option>
+              <option value="Administratif">Administratif</option>
+              <option value="Autre">Autre</option>
             </select>
             <br><br>
             <div class="custom-file">
