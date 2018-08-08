@@ -1,6 +1,7 @@
 
     <h1>FORMATION DE BASE</h1>
     <p>L'objectif de la formation est de permettre à des adultes en difficultés scolaires, sociales et/ou économiques de se replacer dans une perspective réaliste d'accès à une formation qualifiante ou à un emploi non qualifié.</p>
+    <h2>Contenu des programmes pédagogiques :</h2>
     <ul>
         <li><b>Matières proposées en fonction des modules :</b><br>français, mathématiques et néerlandais, Initiation à l'informatique, méthode de travail, logique, module de citoyenneté et d'insertion professionnelle.</li>
         <li><b>Suivi individuel :</b><br> Guidance psycho-sociale, suivi du projet professionnel, aide à la recherche et à l'inscription en formation professionnelle ou qualifiante.</li>

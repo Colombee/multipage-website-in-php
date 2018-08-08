@@ -108,6 +108,24 @@ nav {
   margin-top: 1em;
 }
 
+.btn-formations:hover{
+  color: #860286;
+  font-weight: bold;
+  border: 1px solid #860286;
+  background-color: #f3e7f3;
+}
+
+.btn-formations:onclick{
+  color: #860286;
+  font-weight: bold;
+  border: 1px solid #860286;
+  background-color: #e9c6e9;
+}
+
+#toggle2{
+  display: none;
+}
+
 footer {
   margin-top: 30px;
   background-color: rgb(67, 68, 71);

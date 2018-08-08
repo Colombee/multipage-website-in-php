@@ -1,19 +1,21 @@
 
     <h1>FORMATION AFT-HORECA : COMMIS DE CUISINE</h1>
-    <p>L'objectif de la formation est de permettre à des adultes en difficultés scolaires, sociales et/ou économiques de se replacer dans une perspective réaliste d'accès à une formation qualifiante ou à un emploi non qualifié.</p>
+    <p>Au terme de la formation, les stagiaires peuvent accéder, soit à un emploi dans le secteur de l'horeca comme commis de cuisine, soit à une formation qualifiante.</p>
+    <h2>Contenu des programmes pédagogiques :</h2>
     <ul>
-        <li><b>Matières proposées en fonction des modules :</b><br>français, mathématiques et néerlandais, Initiation à l'informatique, méthode de travail, logique, module de citoyenneté et d'insertion professionnelle.</li>
-        <li><b>Suivi individuel :</b><br> Guidance psycho-sociale, suivi du projet professionnel, aide à la recherche et à l'inscription en formation professionnelle ou qualifiante.</li>
-        <li><b>Horaire :</b><br>5 jours par semaine, du lundi au vendredi, de 9h à 16h 30.</li>
+        <li><b>Formation professionnelle :</b> Théorie et Pratique dans une cuisine et un restaurant d'application. Apprentissage des techniques de base (découpe de légumes, techniques de cuisson, service en salle,...) et des techniques élémentaires comportementales : l'accueil, la gestion de la pression,l'intégration dans une équipe,...</li>
+        <li><b>Formation de base :</b> Français, Mathématiques et Néerlandais, Initiation à la caisse, Initiation à l´informatique, module de citoyenneté et d´insertion professionnelle.</li>
+        <li><b>Suivi individuel :</b> Guidance psycho-sociale, suivi du projet professionnel, aide à la recherche emploi et/ou l´entrée en formation qualifiante. </li>
+        <li><b>Stage en entreprise :</b> 152 heures maximum d'immersion en entreprise.</li>
+        <li><b>Horaire :</b>5 jours par semaine, du lundi au vendredi.</li>
+        <li><b>Durée :</b>1200 heures de formation + 152 heures de stage en entreprise et 41 heures de guidance sociale.</li>
+        <li></li>
     </ul>
 
     <h2>Calendrier</h2>
-    <ul>
-        <li><b>1ère session :</b> de juin à décembre, avec fermeture en Août (704 heures).</li>
-        <li><b>2ème session :</b> de janvier à avril (413 heures).</li>
-        <li><b>3ème session :</b> d'avril à juin (329 heures).</li>
-        <li>+ heures de guidance.</li>
-    </ul>
-
+    <p>Session de septembre à juillet.</p>
+    
     <h2>Période de recrutement</h2>
-    <p>Les personnes interessées peuvent nous contacter tout au long de l'année pour un test de sélection et un entretien de motivation.</p>
+    <p>Juin-juillet et sur rendez-vous, toute l'année.</p>
+   
+   

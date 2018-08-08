@@ -19,10 +19,10 @@
     <main class="main-formations">
       <div class="row main">
         <div class="col-5 contenu offset-2">
-            <button type="button" class="btn btn-light btn-formations" onclick="onclickBase()">FORM. DE BASE</button>
-            <button type="button" class="btn btn-light btn-formations" onclick="">FORM. COMMIS DE CUISINE</button>
-            <!-- <?php include("formations-base.php"); ?>
-            <?php include("formations-commis.php"); ?> -->
+            <button type="button" class="btn btn-light btn-formations" onclick="toggle()">FORM. DE BASE</button>
+            <button type="button" class="btn btn-light btn-formations" onclick="toggle2()">FORM. COMMIS DE CUISINE</button>
+            <div id="toggle"><?php include("formations-base.php")?></div>
+            <div id="toggle2"><?php include("formations-commis.php"); ?></div>
         </div>
         <?php include("menu.php"); ?>
       </div>
@@ -32,10 +32,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
-        function onclickBase() {
-        $.get("formations-base.php");
-        return true;
-}
+      var off = document.getElementById('toggle');
+      var off2 = document.getElementById('toggle2');
+
+      function toggle() {
+        if (off.style.display = "none") {
+            off.style.display = "block";
+            off2.style.display = "none";
+            btn.style.fontWeight =  '700';
+        } else {
+            off.style.display = "none";
+        }        
+      }
+      function toggle2() {
+        if (off2.style.display = "none") {
+            off2.style.display = "block";
+            off.style.display = "none";
+        } else {
+            off.style.display = "none";
+        }        
+      }
+
     </script>
 
 </body>
