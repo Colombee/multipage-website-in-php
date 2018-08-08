@@ -128,7 +128,7 @@ nav {
 
 footer {
   margin-top: 30px;
-  background-color: rgb(67, 68, 71);
+  background-color: rgba(67, 68, 71, 0.5);
   position: relative;
   display: block;
   bottom: 0px;
@@ -136,14 +136,6 @@ footer {
 
 footer img {
   margin: 30px 20px;
-}
-
-.ri {
-  width: 6%;
-}
-
-.fse3 {
-  width: 10%;
 }
 
 .partenaires {
@@ -154,4 +146,11 @@ footer img {
 .partenaires p {
   font-size: 12px;
   padding-bottom: 15px;
+}
+
+.logos-footer{
+  height: 60px;
+  /* filter: grayscale(100%); */
+  filter: brightness(0.75);
+  
 }
