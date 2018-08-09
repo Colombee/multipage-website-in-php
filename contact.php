@@ -59,7 +59,7 @@
       //Replace the plain text body with one created manually
       $mail->AltBody = 'This is a plain-text message bod';
       //Attach an image file
-      $mail->addAttachment("images/".basename($_FILES['button-file']['name']));
+      $mail->addAttachment($chemin);
       //send the message, check for errors
       $mail->send();
       // if (!$mail->send()) {
@@ -71,22 +71,22 @@
 
 
     function uploadImage($value='') {
+      global $uploadfile;
       if (isset($_FILES['button-file']['name'])) {
-        global $uploadfile;
         //le dossier vers où uploader
         $uploaddir = 'uploads/';
         //la destination complete
         $uploadfile = $uploaddir . basename($_FILES['button-file']['name']);
         //le movement du fichier
         //move_uploaded_file($Nomdufichier à uploader, $destination)
-        envoiMail($uploadfile);
         if (move_uploaded_file($_FILES['button-file']['tmp_name'], $uploadfile)) {
           // return "<img src='$uploadfile' style='max-width:300px' alt=''>";
+          envoiMail($uploadfile);
           return "Fichier uploadé avec succès.";
         } else {
+          envoiMail($uploadfile);
           return "Aucun fichier à uploader.\n";
         }
-        var_dump($_FILES);
       }
     }
 
