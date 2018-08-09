@@ -18,7 +18,7 @@
     <?php include("header.php"); ?>
     <main>
       <div class="row main">
-        <div class="col-5 contenu offset-2">
+        <div class="col-md-5 col-sm-10 contenu offset-md-2 offset-sm-1">
           <h1>NOTRE ASBL</h1>
           <p>Depuis janvier 1998, l'asbl FOR.E.T.(FORmation Emploi Tremplin) est reconnue comme Atelier de Formation par le Travail par la COCOF, le FSE, l'IBFFP et l'ORBEM.<p>
           <p>Elle a pour objet de créer et de gérer des actions visant à former et à qualifier prioritairement des jeunes forestois sans emploi et peu scolarisés.</p>

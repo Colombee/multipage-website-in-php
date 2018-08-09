@@ -18,7 +18,7 @@
     <?php include("header.php"); ?>
     <main class="main-formations">
       <div class="row main">
-        <div class="col-5 contenu offset-2">
+        <div class="col-md-5 col-sm-10 contenu offset-md-2 offset-sm-1">
             <button type="button" class="btn btn-light btn-formations" onclick="toggle()">FORM. DE BASE</button>
             <button type="button" class="btn btn-light btn-formations" onclick="toggle2()">FORM. COMMIS DE CUISINE</button>
             <div id="toggle"><?php include("formations-base.php")?></div>

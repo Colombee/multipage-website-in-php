@@ -1,4 +1,4 @@
-<div class="col-3 mr-auto menu">
+<div class="col-md-3 col-sm-10 contenu offset-md-0 offset-sm-1 mr-auto menu">
   <h5><p>MENU <i class="fas fa-utensils fa-xs"></i></p></h5>
   <ul>
     <li>
