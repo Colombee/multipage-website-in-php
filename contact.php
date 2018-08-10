@@ -45,7 +45,7 @@
       $mail->SMTPSecure = 'tls';
       $mail->SMTPAuth = true;
       $mail->Username = "gpbecode@gmail.com";
-      $mail->Password = "becode2018";
+      include("mdp.php");
       $mail->setFrom('gpbecode@gmail.com', 'gp becode');
       //Set an alternative reply-to address
       $mail->addReplyTo('gpbecode@gmail.com', 'gp becode');
@@ -171,7 +171,7 @@
             <br><br>
             <div class="custom-file">
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000">
-              <input type="file" class="custom-file-input" id="customFile" name="button-file">
+              <input type="file" class="custom-file-input" id="customFile" name="button-file" accept="image/x-png,image/gif,image/jpeg">
               <label class="custom-file-label" for="customFile">Choose file</label>
               <?php if (isset($button_submit)) echo uploadImage(); ?>
             </div>
