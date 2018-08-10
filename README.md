@@ -30,3 +30,7 @@ Exercice en classe.
 
 ### Languages utilisés ?  
 HTML5, CSS3 , Javascript , PHP , Bootstrap
+
+### Lighthouse ?
+
+![lighthouse](/images/lighthouse.png)
