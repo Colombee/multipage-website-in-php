@@ -2,8 +2,7 @@
 
 
 ### Qui a fait le projet ?  
-[Geoffrey Poelmans](https://github.com/geoffrey-poelmans)
-[Colombe Sechehaye](https://github.com/Colombee)
+[Geoffrey Poelmans](https://github.com/geoffrey-poelmans) et [Colombe Sechehaye](https://github.com/Colombee)
 
 ### Qu’est-ce que c’est ?  
 Réalisation de l'exercice : [Projet : Fil Rouge "Multipage Website"](https://github.com/becodeorg/Johnson2/tree/master/projets/multipage-website-in-php)
