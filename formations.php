@@ -41,10 +41,9 @@
         if (off.style.display = "none") {
             off.style.display = "block";
             off2.style.display = "none";
-            btn.style.fontWeight =  '700';
         } else {
             off.style.display = "none";
-        }        
+        }
       }
       function toggle2() {
         if (off2.style.display = "none") {
@@ -52,7 +51,7 @@
             off.style.display = "none";
         } else {
             off.style.display = "none";
-        }        
+        }
       }
 
     </script>
