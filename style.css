@@ -152,5 +152,9 @@ footer img {
   height: 60px;
   /* filter: grayscale(100%); */
   filter: brightness(0.75);
-  
+
+}
+
+#paragrapheCopyright {
+  margin-bottom: 0px;
 }

@@ -45,9 +45,7 @@
       $mail->SMTPSecure = 'tls';
       $mail->SMTPAuth = true;
       $mail->Username = "gpbecode@gmail.com";
-      $mail->Password = "becode2018";
-
-      // include("mdp.php");
+      include("mdp.php");
       $mail->setFrom('gpbecode@gmail.com', 'gp becode');
       //Set an alternative reply-to address
       $mail->addReplyTo('gpbecode@gmail.com', 'gp becode');
@@ -163,7 +161,6 @@
             <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             <?php echo val_email(); ?>
-            fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             <select class="custom-select" name="object-list">
               <option selected>Objet</option>
               <option value="Restaurant">Restaurant</option>
