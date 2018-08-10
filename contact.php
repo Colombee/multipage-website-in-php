@@ -28,6 +28,15 @@
         $san_message = filter_var($message,FILTER_SANITIZE_STRING);
     }
 
+    $fichier = "fichierok.txt";
+    $lastname = $_POST['lastname'];
+    $firstname = $_POST['firstname'];
+    $objet = $_POST['object-list'];
+    $message = $_POST['message'];
+
+    $phrase = "Bonjour " . $firstname . ' ' . $lastname . ". Concernant le sujet : " . $objet . ", vous avez écrit le message suivant : " . $message ;
+    file_put_contents($fichier, $phrase, 0);
+
     function envoiMail($chemin = '')
     {
       global $email,$firstname, $lastname,$objet,$message;
@@ -66,7 +75,6 @@
       //     return "<p style='color:black'>'Message sent!';";
       // }
     }
-
 
     function uploadImage($value='') {
       if (isset($_FILES['button-file']['name'])) {
@@ -130,6 +138,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 
   </head>
   <body>
@@ -203,6 +212,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./gosw.js"></script>
     <script type="text/javascript">
       $("input[type=file]").change(function () {
         var fieldVal = $(this).val();
