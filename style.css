@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 main h1{
@@ -30,19 +30,23 @@ main h2{
   list-style-type: none;
 }
 
-.logo, .navli{
-  margin: 25px;
-}
-
 .logo {
-  width: 35% ;
-  margin-left: 15%;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 100px;
 }
 
 nav {
   font-size: 1.4em;
   background-image: url(images/header_nappe_800x380.jpg);
   border-bottom: 10px rgb(67, 68, 71) solid;
+  height: 130px;
+}
+
+.navbar-nav{
+  position: relative;
+  left: 40%;
 }
 
 #padding-right-nav {
@@ -50,12 +54,20 @@ nav {
   z-index: 2;
 }
 
+.navbar-toggler{
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 330px;
+}
+
 .plate-img{
-  width: 10em;
+  width: 30%;
   padding: 0;
   position: absolute;
-  right: 4em;
+  right: 10%;
   z-index: 1;
+  top: 0px;
 }
 
 .main {
@@ -157,4 +169,28 @@ footer img {
 
 #paragrapheCopyright {
   margin-bottom: 0px;
+}
+
+@media(max-width:767px){
+  .plate-img{
+    display: none;
+  }
+}
+
+@media(min-width:768px){
+  .plate-img{
+    width: 15%;
+  }
+}
+
+@media(min-width:992px){
+  .plate-img{
+    width: 15%;
+  }
+}
+
+@media(min-width:1200px){
+  .plate-img{
+    width: 15%;
+  }
 }

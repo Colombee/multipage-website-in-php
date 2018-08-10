@@ -14,10 +14,8 @@
 
         $lastname = $_POST['lastname'];
         $san_lastname = filter_var($lastname, FILTER_SANITIZE_STRING);
-        // $val_lastname = filter_var($lastname, FILTER_VALIDATE_EMAIL);
         $firstname = $_POST['firstname'];
         $san_firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
-        // $val_firstname = filter_var($firstname, FILTER_VALIDATE_EMAIL);
 
         $email = $_POST['email'];
         $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -29,6 +27,15 @@
         $message = $_POST['message'];
         $san_message = filter_var($message,FILTER_SANITIZE_STRING);
     }
+
+    $fichier = "fichierok.txt";
+    $lastname = $_POST['lastname'];
+    $firstname = $_POST['firstname'];
+    $objet = $_POST['object-list'];
+    $message = $_POST['message'];
+
+    $phrase = "Bonjour " . $firstname . ' ' . $lastname . ". Concernant le sujet : " . $objet . ", vous avez écrit le message suivant : " . $message ;
+    file_put_contents($fichier, $phrase, 0);
 
     function envoiMail($chemin = '')
     {
@@ -68,7 +75,6 @@
       //     return "<p style='color:black'>'Message sent!';";
       // }
     }
-
 
     function uploadImage($value='') {
       global $uploadfile;
@@ -124,15 +130,22 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Document</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css">
+      <title>Page contact</title>
+
+       <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
   </head>
   <body>
     <?php include("header.php"); ?>
     <main>
       <div class="row main">
-        <div class="col-5 contenu offset-2">
+        <div class="col-md-5 col-sm-10 contenu offset-md-2 offset-sm-1">
           <h2 id="contact">Contact</h2>
           <!-- POST METHOD -->
           <form method="POST" enctype='multipart/form-data' action="contact.php">
@@ -199,6 +212,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./gosw.js"></script>
     <script type="text/javascript">
       $("input[type=file]").change(function () {
         var fieldVal = $(this).val();

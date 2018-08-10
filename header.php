@@ -18,6 +18,6 @@
           </li>
         </ul>
     </div>
-    <img class="plate-img" src="images/header_plate2.png" alt="plate decoration">
+    <img class="plate-img" src="images/header_plate3.png" alt="plate decoration">
   </nav>
 </header>
