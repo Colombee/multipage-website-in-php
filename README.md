@@ -29,4 +29,4 @@ Rafraichissement du site [FOR.E.T](http://users.skynet.be/foret/index.html)
 Exercice en classe.
 
 ### Languages utilisés ?  
-HTML5, CSS3 , Javascipt , PHP , Bootstrap
+HTML5, CSS3 , Javascript , PHP , Bootstrap
