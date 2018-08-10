@@ -14,10 +14,8 @@
 
         $lastname = $_POST['lastname'];
         $san_lastname = filter_var($lastname, FILTER_SANITIZE_STRING);
-        // $val_lastname = filter_var($lastname, FILTER_VALIDATE_EMAIL);
         $firstname = $_POST['firstname'];
         $san_firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
-        // $val_firstname = filter_var($firstname, FILTER_VALIDATE_EMAIL);
 
         $email = $_POST['email'];
         $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
