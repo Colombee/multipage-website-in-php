@@ -2,11 +2,11 @@
     "name": "FORmation Emploi Tremplin",
     "short_name": "FOR.E.T",
     "icons": [{
-        "src": "/images/favicon128x128.png",
+        "src": "./images/favicon128x128.png",
         "sizes": "128x128",
         "type": "image/png"
         }, {
-        "src": "/images/favicon512x512.png",
+        "src": "./images/favicon512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       }],
