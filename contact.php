@@ -45,7 +45,9 @@
       $mail->SMTPSecure = 'tls';
       $mail->SMTPAuth = true;
       $mail->Username = "gpbecode@gmail.com";
-      include("mdp.php");
+      $mail->Password = "becode2018";
+
+      // include("mdp.php");
       $mail->setFrom('gpbecode@gmail.com', 'gp becode');
       //Set an alternative reply-to address
       $mail->addReplyTo('gpbecode@gmail.com', 'gp becode');
