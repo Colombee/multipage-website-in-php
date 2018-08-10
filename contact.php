@@ -26,16 +26,14 @@
 
         $message = $_POST['message'];
         $san_message = filter_var($message,FILTER_SANITIZE_STRING);
+
+        $fichier = "fichierok.txt";
+
+        $phrase = "Bonjour " . $firstname . ' ' . $lastname . ". Concernant le sujet : " . $objet . ", vous avez écrit le message suivant : " . $message ;
+        file_put_contents($fichier, $phrase, 0);
     }
 
-    $fichier = "fichierok.txt";
-    $lastname = $_POST['lastname'];
-    $firstname = $_POST['firstname'];
-    $objet = $_POST['object-list'];
-    $message = $_POST['message'];
 
-    $phrase = "Bonjour " . $firstname . ' ' . $lastname . ". Concernant le sujet : " . $objet . ", vous avez écrit le message suivant : " . $message ;
-    file_put_contents($fichier, $phrase, 0);
 
     function envoiMail($chemin = '')
     {
