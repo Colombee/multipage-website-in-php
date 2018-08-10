@@ -16,6 +16,12 @@
     <title>FORET asbl</title>
   </head>
   <body>
+    <div id="cookieID" class="cookie-banner">
+        <div class="cookie-container">
+            <p>We use cookies on this website. By using this website, we'll assume you consent to our policy.</p>
+            <button type="button" class="btn cookie-button" onclick="okCookie()">I understand</button>
+        </div>
+    </div>
     <?php include("header.php"); ?>
     <main>
       <div class="row main">
@@ -36,5 +42,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="./gosw.js"></script>
+    <script type="text/javascript">
+    function okCookie() {
+      document.getElementById('cookieID').style.display = "none";
+    }
+    </script>
   </body>
 </html>

@@ -171,6 +171,44 @@ footer img {
   margin-bottom: 0px;
 }
 
+.cookie-banner{
+    display: block;
+    background: rgba(7, 7, 7, 0.85);
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px;
+}
+
+.cookie-container{
+    margin: 0 auto;
+    width: 70%;
+    color: #f0f0f0;
+    padding: 15px;
+}
+
+.cookie-container p, .cookie-container a{
+    font: 0.75em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cookie-container a{
+    color: slategray;
+}
+
+.cookie-button{
+    background: #ccc;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
 @media(max-width:767px){
   .plate-img{
     display: none;
